@@ -15,7 +15,7 @@ class TrackBloc extends Bloc<TrackEvent, TrackState> {
 
   TrackBloc({required this.repository, required this.connectivity})
     : super(const TrackState()) {
-    // Listen to connectivity
+    
     connectivity.onConnectivityChanged.listen((result) {
       add(
         TrackConnectivityChanged(
